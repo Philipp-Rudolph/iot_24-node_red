@@ -1,0 +1,441 @@
+[
+  {
+    "id": "f1639e48735278ef",
+    "type": "tab",
+    "label": "Flow 1",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "91783f5bc8fc66f2",
+    "type": "tab",
+    "label": "Flow 2",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "40e887515ca3c549",
+    "type": "tab",
+    "label": "LED Control ESP32",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "23277073a246dadc",
+    "type": "mqtt-broker",
+    "name": "test.mosquitto.org",
+    "broker": "test.mosquitto.org",
+    "port": "1883",
+    "clientid": "",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": "4",
+    "keepalive": "60",
+    "cleansession": true,
+    "autoUnsubscribe": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthRetain": "false",
+    "birthPayload": "",
+    "birthMsg": {},
+    "closeTopic": "",
+    "closeQos": "0",
+    "closeRetain": "false",
+    "closePayload": "",
+    "closeMsg": {},
+    "willTopic": "",
+    "willQos": "0",
+    "willRetain": "false",
+    "willPayload": "",
+    "willMsg": {},
+    "userProps": "",
+    "sessionExpiry": ""
+  },
+  {
+    "id": "47dea7334cfc5259",
+    "type": "ui_tab",
+    "name": "Home",
+    "icon": "dashboard",
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "c15b429b19c2927f",
+    "type": "ui_base",
+    "theme": {
+      "name": "theme-light",
+      "lightTheme": {
+        "default": "#0094CE",
+        "baseColor": "#0094CE",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+        "edited": true,
+        "reset": false
+      },
+      "darkTheme": {
+        "default": "#097479",
+        "baseColor": "#097479",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+        "edited": false
+      },
+      "customTheme": {
+        "name": "Untitled Theme 1",
+        "default": "#4B7930",
+        "baseColor": "#4B7930",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+      },
+      "themeState": {
+        "base-color": {
+          "default": "#0094CE",
+          "value": "#0094CE",
+          "edited": false
+        },
+        "page-titlebar-backgroundColor": {
+          "value": "#0094CE",
+          "edited": false
+        },
+        "page-backgroundColor": {
+          "value": "#fafafa",
+          "edited": false
+        },
+        "page-sidebar-backgroundColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "group-textColor": {
+          "value": "#1bbfff",
+          "edited": false
+        },
+        "group-borderColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "group-backgroundColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "widget-textColor": {
+          "value": "#111111",
+          "edited": false
+        },
+        "widget-backgroundColor": {
+          "value": "#0094ce",
+          "edited": false
+        },
+        "widget-borderColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "base-font": {
+          "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+        }
+      },
+      "angularTheme": {
+        "primary": "indigo",
+        "accents": "blue",
+        "warn": "red",
+        "background": "grey",
+        "palette": "light"
+      }
+    },
+    "site": {
+      "name": "Node-RED Dashboard",
+      "hideToolbar": "false",
+      "allowSwipe": "false",
+      "lockMenu": "false",
+      "allowTempTheme": "true",
+      "dateFormat": "DD/MM/YYYY",
+      "sizes": {
+        "sx": 48,
+        "sy": 48,
+        "gx": 6,
+        "gy": 6,
+        "cx": 6,
+        "cy": 6,
+        "px": 0,
+        "py": 0
+      }
+    }
+  },
+  {
+    "id": "6753fddeec54490c",
+    "type": "ui_group",
+    "name": "Led Control ",
+    "tab": "47dea7334cfc5259",
+    "order": 1,
+    "disp": true,
+    "width": "6",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "152478a93fb5c1a3",
+    "type": "inject",
+    "z": "f1639e48735278ef",
+    "name": "Hello, World!",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "200",
+    "crontab": "",
+    "once": false,
+    "onceDelay": "2",
+    "topic": "",
+    "payload": "Hello, World!",
+    "payloadType": "str",
+    "x": 380,
+    "y": 500,
+    "wires": [["a40324b105d02181"]]
+  },
+  {
+    "id": "48702ba9b2d28263",
+    "type": "debug",
+    "z": "f1639e48735278ef",
+    "name": "debug 1",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 720,
+    "y": 700,
+    "wires": []
+  },
+  {
+    "id": "a40324b105d02181",
+    "type": "function",
+    "z": "f1639e48735278ef",
+    "name": "function 1",
+    "func": "var dateNow = new Date();\nvar timeAsString = dateNow.toLocaleTimeString();\n    \nmsg.payload = msg.payload + \n              ' The time is ' + \n              timeAsString + '.';\n                  \nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 560,
+    "y": 600,
+    "wires": [["48702ba9b2d28263"]]
+  },
+  {
+    "id": "30f44cbbda127ac3",
+    "type": "comment",
+    "z": "f1639e48735278ef",
+    "name": "source",
+    "info": "source node-red\n\nhttps://nodered.org/docs/tutorials/first-flow",
+    "x": 590,
+    "y": 440,
+    "wires": []
+  },
+  {
+    "id": "1c3d429e1a479d1e",
+    "type": "inject",
+    "z": "91783f5bc8fc66f2",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5000",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 170,
+    "y": 320,
+    "wires": [["74e204bce75dc911"]]
+  },
+  {
+    "id": "74e204bce75dc911",
+    "type": "http request",
+    "z": "91783f5bc8fc66f2",
+    "name": "",
+    "method": "GET",
+    "ret": "txt",
+    "paytoqs": "ignore",
+    "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.csv",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 370,
+    "y": 380,
+    "wires": [["4cb2f8f7f2655585"]]
+  },
+  {
+    "id": "4cb2f8f7f2655585",
+    "type": "csv",
+    "z": "91783f5bc8fc66f2",
+    "name": "",
+    "sep": ",",
+    "hdrin": true,
+    "hdrout": "none",
+    "multi": "one",
+    "ret": "\\n",
+    "temp": "",
+    "skip": "0",
+    "strings": true,
+    "include_empty_strings": "",
+    "include_null_values": "",
+    "x": 550,
+    "y": 460,
+    "wires": [["d63ade66cedd6280", "4a3576ab7de714ac"]]
+  },
+  {
+    "id": "d63ade66cedd6280",
+    "type": "debug",
+    "z": "91783f5bc8fc66f2",
+    "name": "debug 2",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 960,
+    "y": 600,
+    "wires": []
+  },
+  {
+    "id": "4a3576ab7de714ac",
+    "type": "switch",
+    "z": "91783f5bc8fc66f2",
+    "name": "",
+    "property": "payload.mag",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "gte",
+        "v": "7",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 750,
+    "y": 460,
+    "wires": [["b71ba351289edcc1"]]
+  },
+  {
+    "id": "b71ba351289edcc1",
+    "type": "change",
+    "z": "91783f5bc8fc66f2",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "PANIC!!",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 960,
+    "y": 500,
+    "wires": [["d63ade66cedd6280"]]
+  },
+  {
+    "id": "2bb30bffe538d2ab",
+    "type": "comment",
+    "z": "91783f5bc8fc66f2",
+    "name": "source",
+    "info": "source: node-red (getting started)\n\nhttps://nodered.org/docs/tutorials/second-flow",
+    "x": 370,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "4e017e9dcb8b7d9b",
+    "type": "mqtt out",
+    "z": "40e887515ca3c549",
+    "name": "",
+    "topic": "/LedControl",
+    "qos": "",
+    "retain": "",
+    "respTopic": "",
+    "contentType": "",
+    "userProps": "",
+    "correl": "",
+    "expiry": "",
+    "broker": "23277073a246dadc",
+    "x": 370,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "41ba9751aa5e9343",
+    "type": "ui_button",
+    "z": "40e887515ca3c549",
+    "name": "",
+    "group": "6753fddeec54490c",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "OFF",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "2",
+    "payloadType": "str",
+    "topic": "/LedControl",
+    "topicType": "msg",
+    "x": 150,
+    "y": 420,
+    "wires": [["4e017e9dcb8b7d9b"]]
+  },
+  {
+    "id": "5f9b789f604adc6f",
+    "type": "ui_button",
+    "z": "40e887515ca3c549",
+    "name": "",
+    "group": "6753fddeec54490c",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "ON",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "1",
+    "payloadType": "str",
+    "topic": "LedControl",
+    "topicType": "msg",
+    "x": 150,
+    "y": 320,
+    "wires": [["4e017e9dcb8b7d9b"]]
+  }
+]
