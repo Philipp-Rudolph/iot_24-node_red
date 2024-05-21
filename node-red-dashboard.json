@@ -2,7 +2,7 @@
   {
     "id": "f1639e48735278ef",
     "type": "tab",
-    "label": "Flow 1",
+    "label": "Hello World",
     "disabled": false,
     "info": "",
     "env": []
@@ -10,7 +10,7 @@
   {
     "id": "91783f5bc8fc66f2",
     "type": "tab",
-    "label": "Flow 2",
+    "label": "Earthquake Sensor",
     "disabled": false,
     "info": "",
     "env": []
